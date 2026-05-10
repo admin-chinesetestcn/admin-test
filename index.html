@@ -1,149 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin.chinesetest.cn/queryScore.do</title>
+  <style>
+*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;margin:0}
+h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
+h2{font-size:30px;margin-top:20px;margin-bottom:10px}
+h3{font-size:24px;margin-top:20px;margin-bottom:10px}
+h4{font-size:18px;margin-top:10px;margin-bottom:10px}
+h6{font-size:12px;margin-top:10px;margin-bottom:10px}
+p{margin:0 0 10px}
+img{vertical-align:middle;border:0}
+table{border-spacing:0;border-collapse:collapse;background-color:transparent;width:100%}
+td,th{padding:0}
+.table{width:100%;max-width:100%;margin-bottom:20px}
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td{padding:8px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}
+.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd;text-align:left}
+.table>caption+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>th,.table>thead:first-child>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>td{border-top:0}
+.table-bordered{border:1px solid #ddd}
+.table-bordered>thead>tr>th,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>td{border:1px solid #ddd}
+.table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px}
+.table>thead>tr>td.active,.table>tbody>tr>td.active,.table>tfoot>tr>td.active,.table>thead>tr>th.active,.table>tbody>tr>th.active,.table>tfoot>tr>th.active,.table>thead>tr.active>td,.table>tbody>tr.active>td,.table>tfoot>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr.active>th,.table>tfoot>tr.active>th{background-color:#f5f5f5}
+.panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
+.panel-body{padding:15px}
+.panel-body:before,.panel-body:after{display:table;content:" "}
+.panel-body:after{clear:both}
+.panel-default{border-color:#ddd}
+.panel-default>.panel-heading{color:#333;background-color:#f5f5f5;border-color:#ddd}
+.panel>.table,.panel>.table-responsive>.table{margin-bottom:0}
+.panel>.table-bordered{border:0}
+.panel>.table-bordered>thead>tr>th:first-child,.panel>.table-bordered>tbody>tr>th:first-child,.panel>.table-bordered>tfoot>tr>th:first-child,.panel>.table-bordered>thead>tr>td:first-child,.panel>.table-bordered>tbody>tr>td:first-child,.panel>.table-bordered>tfoot>tr>td:first-child{border-left:0}
+.panel>.table-bordered>thead>tr>th:last-child,.panel>.table-bordered>tbody>tr>th:last-child,.panel>.table-bordered>tfoot>tr>th:last-child,.panel>.table-bordered>thead>tr>td:last-child,.panel>.table-bordered>tbody>tr>td:last-child,.panel>.table-bordered>tfoot>tr>td:last-child{border-right:0}
+.panel>.table-bordered>thead>tr:first-child>td,.panel>.table-bordered>tbody>tr:first-child>td,.panel>.table-bordered>thead>tr:first-child>th,.panel>.table-bordered>tbody>tr:first-child>th{border-bottom:0}
+.panel>.table-bordered>tbody>tr:last-child>td,.panel>.table-bordered>tfoot>tr:last-child>td,.panel>.table-bordered>tbody>tr:last-child>th,.panel>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}
+.panel>.panel-body+.table,.panel>.table+.panel-body{border-top:1px solid #ddd}
+.well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);box-shadow:inset 0 1px 1px rgba(0,0,0,.05)}
+.well-lg{padding:24px;border-radius:6px}
+.well-sm{padding:9px;border-radius:3px}
+.text-right{text-align:right}
+center{display:block;text-align:center}
+  </style>
+</head>
+<body>
 
-<!-- Bootstrap -->
-<title>admin.chinesetest.cn/queryScore.do</title>
-<link rel="stylesheet" href="styles.css" type="text/css">
-<div class="well-sm">
-	<center>
-	  <h2>中文考试成绩在线验证结果查询</h3>
-	  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>
-	</center>
-	<div class="panel panel-default">
-		<div class="well-lg" >
-			<div class="panel panel-default">
-				<!-- Default panel contents -->
-				<div class="panel-body">
-					Information of test taker 
-				</div>
-				<!-- Table -->
-				<table class="table table-bordered">
-					<tbody>
-						<tr>
-							<td class="active text-right">Name on Certificate </td>
-							<td>FITRI INDAR DEWI</td>
-							<td rowspan="5" width="100px">
-								<img src="FITRI INDAR DEWI.jpeg" height="200px"/>
-							</td>
-						</tr>
-						<tr>
-							<td class="active text-right">Chinese Name</td>
-							<td>戴薇</td>
-						</tr>
-						<tr>
-							<td class="active text-right">Nationality</td>
-							<td>印度尼西亚</td>
-						</tr>
-						<tr>
-							<td class="active text-right">Gender</td>
-							<td>女</td>
-						</tr>
-						<tr>
-							<td colspan="2" class="" style="font-size:14px;">考试信息</td>
-						</tr>
-						<tr>
-							<td class="active text-right">考点名称</td>
-							<td colspan="2">印度尼西亚阿拉扎大学孔子学院(网考)</td>
-						</tr>
-						<tr>
-							<td class="active text-right">Ticket No.</td>
-							<td colspan="2">H52451713110056986&nbsp;&nbsp;H92451713192048991</td>
-						</tr>
-						<tr>
-							<td class="active text-right">证书编号</td>
-							<td colspan="2"> H52426023149</td>
-						</tr>
-						<tr>
-							<td class="active text-right">Test Type</td>
-							<td colspan="2">HSK五级</td>
-						</tr>
-						
-						<tr>
-							<td class="active text-right">Test Time</td>
-							<td colspan="2">Apr 11, 2026</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			
-			
-			<div class="panel panel-default">
-				<!-- Default panel contents -->
-				<div class="panel-body">
-					HSK五级(Apr 11, 2026)中文水平考试
-				</div>
-				<!-- Table -->
-				<table class="table table-bordered">
-					<thead>
-						<tr class="active">					
-								<th><div align="center">听力</div></th>
-								<th><div align="center">阅读</div></th>				
-								<th><div align="center">写作</div></th>
-							<th>
-							<div align="center">
-									Total Score
-							</div>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td align="center">
-								63
-							</td>
-							
-							<td align="center">
-								69
-							</td>
-							
-							<td align="center">
-								81
-							</td>
-							
-							<td align="center">
-								213
-							</td>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				
-			</div>
-			
-			<!-- 越南才显示 或者 能关联上口语的才显示 flag 代表关联上成绩 180 越南-->
-			
-			
-				<div class="panel panel-default">
-					<!-- Default panel contents -->
-					<div class="panel-body">
-						HSKK（高级）(Apr 11, 2026)中文水平考试
-					</div>
-					<!-- Table -->
-					<table class="table table-bordered">
-						<thead>
-							<tr class="active">
-								<th><div align="center">口试</div></th>
-								
-								<th><div align="center">Total Score</div></th>
+<!-- ═══════════════════════════════════════════════════
+     STUDENT DATABASE
+     Add each student as an object below.
+     zsid must match the URL param: queryScore.do?zsid=XXXX
+     Leave HSKK fields empty "" to hide the HSKK panel.
+══════════════════════════════════════════════════════ -->
+<script>
+var STUDENTS = [
+  {
+    "zsid"                : "15070449",
+    "Name on Certificate" : "SURENDRA KUMAR",
+    "Chinese Name"        : "苏因",
+    "Nationality"         : "印度",
+    "Gender"              : "男",
+    "Exam Center"         : "尼泊尔L.R.I孔子课堂",
+    "Ticket No."          : "H4250594905000207&nbsp;&nbsp;H8250594905000208",
+    "Certificate No."     : "H4250674101",
+    "Test Type"           : "HSK四级",
+    "Test Time"           : "AUG 17, 2025",
+    "Photo"               : "./photo/srk.png",
+    "HSK Listening"       : "68",
+    "HSK Reading"         : "64",
+    "HSK Writing"         : "70",
+    "HSK Total"           : "202",
+    "HSKK Level"          : "中级",
+    "HSKK Speaking"       : "62",
+    "HSKK Total"          : "62",
+    "HSKK Status"         : "合格"
+  },
+  {
+    "zsid"                : "20240001",
+    "Name on Certificate" : "FITRI INDAR DEWI",
+    "Chinese Name"        : "戴薇",
+    "Nationality"         : "印度尼西亚",
+    "Gender"              : "女",
+    "Exam Center"         : "印度尼西亚阿拉扎大学孔子学院(网考)",
+    "Ticket No."          : "H52451713110056986&nbsp;&nbsp;H92451713192048991",
+    "Certificate No."     : "H52426023149",
+    "Test Type"           : "HSK五级",
+    "Test Time"           : "Apr 11, 2026",
+    "Photo"               : "FITRI INDAR DEWI.jpeg",
+    "HSK Listening"       : "63",
+    "HSK Reading"         : "69",
+    "HSK Writing"         : "81",
+    "HSK Total"           : "213",
+    "HSKK Level"          : "高级",
+    "HSKK Speaking"       : "61",
+    "HSKK Total"          : "61",
+    "HSKK Status"         : "合格"
+  }
+  /* ── ADD MORE STUDENTS HERE ─────────────────────────
+  ,{
+    "zsid"                : "",
+    "Name on Certificate" : "",
+    "Chinese Name"        : "",
+    "Nationality"         : "",
+    "Gender"              : "",
+    "Exam Center"         : "",
+    "Ticket No."          : "",
+    "Certificate No."     : "",
+    "Test Type"           : "",
+    "Test Time"           : "",
+    "Photo"               : "",
+    "HSK Listening"       : "",
+    "HSK Reading"         : "",
+    "HSK Writing"         : "",
+    "HSK Total"           : "",
+    "HSKK Level"          : "",
+    "HSKK Speaking"       : "",
+    "HSKK Total"          : "",
+    "HSKK Status"         : ""
+  }
+  ──────────────────────────────────────────────────── */
+];
+</script>
+<!-- ══════════════════════════════════════════════════ -->
 
-								<th><div align="center">Status</div></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td align="center">
-									61
-								</td>
-								
-								<td align="center">61</td>
-								<td align="center">合格</td>		
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			<center>
-	 			<h6>最终解释权归汉考国际所有</h6>
-			</center>
-			
-		</div>
-	</div>
-	
-</div>
+<div class="well-sm" id="app"></div>
+
+<script>
+(function () {
+
+  /* get URL query param */
+  function getParam(name) {
+    var qs   = window.location.search.substring(1);
+    var vars = qs.split('&');
+    for (var i = 0; i < vars.length; i++) {
+      var pair = vars[i].split('=');
+      if (decodeURIComponent(pair[0]) === name) {
+        return decodeURIComponent((pair[1] || '').replace(/\+/g, ' '));
+      }
+    }
+    return null;
+  }
+
+  /* find student by zsid */
+  function findStudent(zsid) {
+    for (var i = 0; i < STUDENTS.length; i++) {
+      if (STUDENTS[i].zsid === zsid) return STUDENTS[i];
+    }
+    return null;
+  }
+
+  /* build HSK header columns */
+  function hskHeaders(s) {
+    var isHSK6 = (s["Test Type"] || "").indexOf("六级") !== -1;
+    if (isHSK6) {
+      return '<th><div align="center">听力</div></th>'
+           + '<th><div align="center">阅读</div></th>'
+           + '<th><div align="center">Total Score</div></th>';
+    }
+    return '<th><div align="center">听力</div></th>'
+         + '<th><div align="center">阅读</div></th>'
+         + '<th><div align="center">写作</div></th>'
+         + '<th>\n\t\t\t\t\t\t\t<div align="center">\n\t\t\t\t\t\t\t\t\tTotal Score\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</th>';
+  }
+
+  /* build HSK score cells */
+  function hskScores(s) {
+    var isHSK6 = (s["Test Type"] || "").indexOf("六级") !== -1;
+    if (isHSK6) {
+      return '<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Listening"] + '\n\t\t\t\t\t\t</td>'
+           + '\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Reading"] + '\n\t\t\t\t\t\t</td>'
+           + '\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Total"] + '\n\t\t\t\t\t\t</td>';
+    }
+    return '<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Listening"] + '\n\t\t\t\t\t\t</td>'
+         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Reading"] + '\n\t\t\t\t\t\t</td>'
+         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Writing"] + '\n\t\t\t\t\t\t</td>'
+         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Total"] + '\n\t\t\t\t\t\t</td>';
+  }
+
+  /* render full student result — exact original markup */
+  function renderStudent(s) {
+
+    var photoCell = s["Photo"]
+      ? '<img src="' + s["Photo"] + '" height="200px" onerror="this.style.display=\'none\'"\/>'
+      : '';
+
+    var hasHSKK = s["HSKK Level"] && s["HSKK Speaking"];
+
+    var hskKBlock = '';
+    if (hasHSKK) {
+      hskKBlock = [
+        '',
+        '\t\t\t\t<div class="panel panel-default">',
+        '\t\t\t\t\t<!-- Default panel contents -->',
+        '\t\t\t\t\t<div class="panel-body">',
+        '\t\t\t\t\t\tHSKK（' + s["HSKK Level"] + '）(' + s["Test Time"] + ')中文水平考试',
+        '\t\t\t\t\t</div>',
+        '\t\t\t\t\t<!-- Table -->',
+        '\t\t\t\t\t<table class="table table-bordered">',
+        '\t\t\t\t\t\t<thead>',
+        '\t\t\t\t\t\t\t<tr class="active">',
+        '\t\t\t\t\t\t\t\t<th><div align="center">口试</div></th>',
+        '\t\t\t\t\t\t\t\t',
+        '\t\t\t\t\t\t\t\t<th><div align="center">Total Score</div></th>',
+        '',
+        '\t\t\t\t\t\t\t\t<th><div align="center">Status</div></th>',
+        '\t\t\t\t\t\t\t</tr>',
+        '\t\t\t\t\t\t</thead>',
+        '\t\t\t\t\t\t<tbody>',
+        '\t\t\t\t\t\t\t<tr>',
+        '\t\t\t\t\t\t\t\t<td align="center">',
+        '\t\t\t\t\t\t\t\t\t' + s["HSKK Speaking"],
+        '\t\t\t\t\t\t\t\t</td>',
+        '\t\t\t\t\t\t\t\t',
+        '\t\t\t\t\t\t\t\t<td align="center">' + s["HSKK Total"] + '</td>',
+        '\t\t\t\t\t\t\t\t<td align="center">' + s["HSKK Status"] + '</td>',
+        '\t\t\t\t\t\t\t</tr>',
+        '\t\t\t\t\t\t</tbody>',
+        '\t\t\t\t\t</table>',
+        '\t\t\t\t</div>'
+      ].join('\n');
+    }
+
+    var lines = [
+      '<center>',
+      '  <h2>中文考试成绩在线验证结果查询</h2>',
+      '  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>',
+      '</center>',
+      '<div class="panel panel-default">',
+      '\t<div class="well-lg" >',
+      '\t\t<div class="panel panel-default">',
+      '\t\t\t<!-- Default panel contents -->',
+      '\t\t\t<div class="panel-body">',
+      '\t\t\t\tInformation of test taker ',
+      '\t\t\t</div>',
+      '\t\t\t<!-- Table -->',
+      '\t\t\t<table class="table table-bordered">',
+      '\t\t\t\t<tbody>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Name on Certificate </td>',
+      '\t\t\t\t\t\t<td>' + s["Name on Certificate"] + '</td>',
+      '\t\t\t\t\t\t<td rowspan="5" width="100px">',
+      '\t\t\t\t\t\t\t' + photoCell,
+      '\t\t\t\t\t\t</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Chinese Name</td>',
+      '\t\t\t\t\t\t<td>' + s["Chinese Name"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Nationality</td>',
+      '\t\t\t\t\t\t<td>' + s["Nationality"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Gender</td>',
+      '\t\t\t\t\t\t<td>' + s["Gender"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td colspan="2" class="" style="font-size:14px;">考试信息</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">考点名称</td>',
+      '\t\t\t\t\t\t<td colspan="2">' + s["Exam Center"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Ticket No.</td>',
+      '\t\t\t\t\t\t<td colspan="2">' + s["Ticket No."] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">证书编号</td>',
+      '\t\t\t\t\t\t<td colspan="2"> ' + s["Certificate No."] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Test Type</td>',
+      '\t\t\t\t\t\t<td colspan="2">' + s["Test Type"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t\t',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t<td class="active text-right">Test Time</td>',
+      '\t\t\t\t\t\t<td colspan="2">' + s["Test Time"] + '</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t</tbody>',
+      '\t\t\t</table>',
+      '\t\t</div>',
+      '\t\t',
+      '\t\t',
+      '\t\t<div class="panel panel-default">',
+      '\t\t\t<!-- Default panel contents -->',
+      '\t\t\t<div class="panel-body">',
+      '\t\t\t\t' + s["Test Type"] + '(' + s["Test Time"] + ')中文水平考试',
+      '\t\t\t</div>',
+      '\t\t\t<!-- Table -->',
+      '\t\t\t<table class="table table-bordered">',
+      '\t\t\t\t<thead>',
+      '\t\t\t\t\t<tr class="active">\t\t\t\t\t\t\t',
+      '\t\t\t\t\t\t\t' + hskHeaders(s),
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t</thead>',
+      '\t\t\t\t<tbody>',
+      '\t\t\t\t\t<tr>',
+      '\t\t\t\t\t\t' + hskScores(s),
+      '\t\t\t\t\t\t</td>',
+      '\t\t\t\t\t</tr>',
+      '\t\t\t\t</tbody>',
+      '\t\t\t</table>',
+      '\t\t\t',
+      '\t\t</div>',
+      '\t\t',
+      '\t\t<!-- 越南才显示 或者 能关联上口语的才显示 flag 代表关联上成绩 180 越南-->',
+      '\t\t',
+      '\t\t',
+      hskKBlock,
+      '\t\t<center>',
+      '\t \t\t\t<h6>最终解释权归汉考国际所有</h6>',
+      '\t\t</center>',
+      '\t\t',
+      '\t</div>',
+      '</div>'
+    ];
+
+    return lines.join('\n');
+  }
+
+  /* not found page — same header, error body */
+  function renderNotFound(zsid) {
+    return [
+      '<center>',
+      '  <h2>中文考试成绩在线验证结果查询</h2>',
+      '  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>',
+      '</center>',
+      '<div class="panel panel-default">',
+      '\t<div class="well-lg" style="text-align:center;padding:40px 24px;">',
+      '\t\t<h3 style="color:#a94442;margin-bottom:16px;">未找到记录</h3>',
+      '\t\t<p style="font-size:15px;color:#555;">No score record found for candidate ID: <strong>' + (zsid || '') + '</strong></p>',
+      '\t\t<p style="font-size:13px;color:#999;">请确认准考证号是否正确 / Please verify the ID and try again.</p>',
+      '\t</div>',
+      '</div>'
+    ].join('\n');
+  }
+
+  /* ── MAIN ── */
+  var zsid    = getParam('zsid');
+  var student = zsid ? findStudent(zsid) : null;
+  var app     = document.getElementById('app');
+
+  app.innerHTML = student ? renderStudent(student) : renderNotFound(zsid);
+
+})();
+</script>
+
+</body>
+</html>
