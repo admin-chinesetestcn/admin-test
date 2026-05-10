@@ -5,53 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>admin.chinesetest.cn/queryScore.do</title>
   <style>
+/*!
+ * Bootstrap v3.3.0 (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
+body{margin:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block;vertical-align:baseline}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background-color:transparent}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:700}
+dfn{font-style:italic}
+h1{margin:.67em 0;font-size:2em}
+mark{color:#000;background:#ff0}
+small{font-size:80%}
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{margin:0;font:inherit;color:inherit}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+input{line-height:normal}
+input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}
+input[type=search]{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;-webkit-appearance:textfield}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{padding:.35em .625em .75em;margin:0 2px;border:1px solid silver}
+legend{padding:0;border:0}
+textarea{overflow:auto}
+optgroup{font-weight:700}
+table{border-spacing:0;border-collapse:collapse}
+td,th{padding:0}
 *,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff;margin:0}
-h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
-h2{font-size:30px;margin-top:20px;margin-bottom:10px}
-h3{font-size:24px;margin-top:20px;margin-bottom:10px}
-h4{font-size:18px;margin-top:10px;margin-bottom:10px}
-h6{font-size:12px;margin-top:10px;margin-bottom:10px}
+body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}
+input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
+a{color:#428bca;text-decoration:none}
+a:hover,a:focus{color:#2a6496;text-decoration:underline}
+a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}
+figure{margin:0}
+img{vertical-align:middle}
+hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small,.h1 small,.h2 small,.h3 small,.h4 small,.h5 small,.h6 small,h1 .small,h2 .small,h3 .small,h4 .small,h5 .small,h6 .small,.h1 .small,.h2 .small,.h3 .small,.h4 .small,.h5 .small,.h6 .small{font-weight:400;line-height:1;color:#777}
+h1,.h1,h2,.h2,h3,.h3{margin-top:20px;margin-bottom:10px}
+h4,.h4,h5,.h5,h6,.h6{margin-top:10px;margin-bottom:10px}
+h1,.h1{font-size:36px}
+h2,.h2{font-size:30px}
+h3,.h3{font-size:24px}
+h4,.h4{font-size:18px}
+h5,.h5{font-size:14px}
+h6,.h6{font-size:12px}
 p{margin:0 0 10px}
-img{vertical-align:middle;border:0}
-table{border-spacing:0;border-collapse:collapse;background-color:transparent;width:100%}
-td,th{padding:0}
+small,.small{font-size:85%}
+.text-left{text-align:left}
+.text-right{text-align:right}
+.text-center{text-align:center}
+.text-justify{text-align:justify}
+.text-nowrap{white-space:nowrap}
+table{background-color:transparent}
+caption{padding-top:8px;padding-bottom:8px;color:#777;text-align:left}
+th{text-align:left}
 .table{width:100%;max-width:100%;margin-bottom:20px}
 .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td{padding:8px;line-height:1.42857143;vertical-align:top;border-top:1px solid #ddd}
-.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd;text-align:left}
+.table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}
 .table>caption+thead>tr:first-child>th,.table>colgroup+thead>tr:first-child>th,.table>thead:first-child>tr:first-child>th,.table>caption+thead>tr:first-child>td,.table>colgroup+thead>tr:first-child>td,.table>thead:first-child>tr:first-child>td{border-top:0}
+.table>tbody+tbody{border-top:2px solid #ddd}
+.table .table{background-color:#fff}
 .table-bordered{border:1px solid #ddd}
 .table-bordered>thead>tr>th,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>td{border:1px solid #ddd}
 .table-bordered>thead>tr>th,.table-bordered>thead>tr>td{border-bottom-width:2px}
+table col[class*=col-]{position:static;display:table-column;float:none}
+table td[class*=col-],table th[class*=col-]{position:static;display:table-cell;float:none}
 .table>thead>tr>td.active,.table>tbody>tr>td.active,.table>tfoot>tr>td.active,.table>thead>tr>th.active,.table>tbody>tr>th.active,.table>tfoot>tr>th.active,.table>thead>tr.active>td,.table>tbody>tr.active>td,.table>tfoot>tr.active>td,.table>thead>tr.active>th,.table>tbody>tr.active>th,.table>tfoot>tr.active>th{background-color:#f5f5f5}
+@media screen and (max-width:767px){
+  .table-responsive{width:100%;margin-bottom:15px;overflow-y:hidden;-ms-overflow-style:-ms-autohiding-scrollbar;border:1px solid #ddd}
+  .table-responsive>.table{margin-bottom:0}
+  .table-responsive>.table>thead>tr>th,.table-responsive>.table>tbody>tr>th,.table-responsive>.table>tfoot>tr>th,.table-responsive>.table>thead>tr>td,.table-responsive>.table>tbody>tr>td,.table-responsive>.table>tfoot>tr>td{white-space:nowrap}
+  .table-responsive>.table-bordered{border:0}
+  .table-responsive>.table-bordered>thead>tr>th:first-child,.table-responsive>.table-bordered>tbody>tr>th:first-child,.table-responsive>.table-bordered>tfoot>tr>th:first-child,.table-responsive>.table-bordered>thead>tr>td:first-child,.table-responsive>.table-bordered>tbody>tr>td:first-child,.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0}
+  .table-responsive>.table-bordered>thead>tr>th:last-child,.table-responsive>.table-bordered>tbody>tr>th:last-child,.table-responsive>.table-bordered>tfoot>tr>th:last-child,.table-responsive>.table-bordered>thead>tr>td:last-child,.table-responsive>.table-bordered>tbody>tr>td:last-child,.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0}
+  .table-responsive>.table-bordered>tbody>tr:last-child>th,.table-responsive>.table-bordered>tfoot>tr:last-child>th,.table-responsive>.table-bordered>tbody>tr:last-child>td,.table-responsive>.table-bordered>tfoot>tr:last-child>td{border-bottom:0}
+}
 .panel{margin-bottom:20px;background-color:#fff;border:1px solid transparent;border-radius:4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,.05);box-shadow:0 1px 1px rgba(0,0,0,.05)}
 .panel-body{padding:15px}
-.panel-body:before,.panel-body:after{display:table;content:" "}
-.panel-body:after{clear:both}
+.panel-heading{padding:10px 15px;border-bottom:1px solid transparent;border-top-left-radius:3px;border-top-right-radius:3px}
+.panel-title{margin-top:0;margin-bottom:0;font-size:16px;color:inherit}
+.panel-title>a{color:inherit}
+.panel-footer{padding:10px 15px;background-color:#f5f5f5;border-top:1px solid #ddd;border-bottom-right-radius:3px;border-bottom-left-radius:3px}
+.panel>.table,.panel>.table-responsive>.table,.panel>.panel-collapse>.table{margin-bottom:0}
+.panel>.table-bordered,.panel>.table-responsive>.table-bordered{border:0}
+.panel>.table-bordered>thead>tr>th:first-child,.panel>.table-responsive>.table-bordered>thead>tr>th:first-child,.panel>.table-bordered>tbody>tr>th:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:first-child,.panel>.table-bordered>tfoot>tr>th:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:first-child,.panel>.table-bordered>thead>tr>td:first-child,.panel>.table-responsive>.table-bordered>thead>tr>td:first-child,.panel>.table-bordered>tbody>tr>td:first-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:first-child,.panel>.table-bordered>tfoot>tr>td:first-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:first-child{border-left:0}
+.panel>.table-bordered>thead>tr>th:last-child,.panel>.table-responsive>.table-bordered>thead>tr>th:last-child,.panel>.table-bordered>tbody>tr>th:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>th:last-child,.panel>.table-bordered>tfoot>tr>th:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>th:last-child,.panel>.table-bordered>thead>tr>td:last-child,.panel>.table-responsive>.table-bordered>thead>tr>td:last-child,.panel>.table-bordered>tbody>tr>td:last-child,.panel>.table-responsive>.table-bordered>tbody>tr>td:last-child,.panel>.table-bordered>tfoot>tr>td:last-child,.panel>.table-responsive>.table-bordered>tfoot>tr>td:last-child{border-right:0}
+.panel>.table-bordered>thead>tr:first-child>td,.panel>.table-responsive>.table-bordered>thead>tr:first-child>td,.panel>.table-bordered>tbody>tr:first-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>td,.panel>.table-bordered>thead>tr:first-child>th,.panel>.table-responsive>.table-bordered>thead>tr:first-child>th,.panel>.table-bordered>tbody>tr:first-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:first-child>th{border-bottom:0}
+.panel>.table-bordered>tbody>tr:last-child>td,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>td,.panel>.table-bordered>tfoot>tr:last-child>td,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>td,.panel>.table-bordered>tbody>tr:last-child>th,.panel>.table-responsive>.table-bordered>tbody>tr:last-child>th,.panel>.table-bordered>tfoot>tr:last-child>th,.panel>.table-responsive>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}
+.panel>.panel-body+.table,.panel>.panel-body+.table-responsive,.panel>.table+.panel-body,.panel>.table-responsive+.panel-body{border-top:1px solid #ddd}
+.panel>.table>tbody:first-child>tr:first-child th,.panel>.table>tbody:first-child>tr:first-child td{border-top:0}
 .panel-default{border-color:#ddd}
 .panel-default>.panel-heading{color:#333;background-color:#f5f5f5;border-color:#ddd}
-.panel>.table,.panel>.table-responsive>.table{margin-bottom:0}
-.panel>.table-bordered{border:0}
-.panel>.table-bordered>thead>tr>th:first-child,.panel>.table-bordered>tbody>tr>th:first-child,.panel>.table-bordered>tfoot>tr>th:first-child,.panel>.table-bordered>thead>tr>td:first-child,.panel>.table-bordered>tbody>tr>td:first-child,.panel>.table-bordered>tfoot>tr>td:first-child{border-left:0}
-.panel>.table-bordered>thead>tr>th:last-child,.panel>.table-bordered>tbody>tr>th:last-child,.panel>.table-bordered>tfoot>tr>th:last-child,.panel>.table-bordered>thead>tr>td:last-child,.panel>.table-bordered>tbody>tr>td:last-child,.panel>.table-bordered>tfoot>tr>td:last-child{border-right:0}
-.panel>.table-bordered>thead>tr:first-child>td,.panel>.table-bordered>tbody>tr:first-child>td,.panel>.table-bordered>thead>tr:first-child>th,.panel>.table-bordered>tbody>tr:first-child>th{border-bottom:0}
-.panel>.table-bordered>tbody>tr:last-child>td,.panel>.table-bordered>tfoot>tr:last-child>td,.panel>.table-bordered>tbody>tr:last-child>th,.panel>.table-bordered>tfoot>tr:last-child>th{border-bottom:0}
-.panel>.panel-body+.table,.panel>.table+.panel-body{border-top:1px solid #ddd}
 .well{min-height:20px;padding:19px;margin-bottom:20px;background-color:#f5f5f5;border:1px solid #e3e3e3;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.05);box-shadow:inset 0 1px 1px rgba(0,0,0,.05)}
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
-.text-right{text-align:right}
-center{display:block;text-align:center}
+.clearfix:before,.clearfix:after,.panel-body:before,.panel-body:after{display:table;content:" "}
+.clearfix:after,.panel-body:after{clear:both}
+.pull-right{float:right!important}
+.pull-left{float:left!important}
+.hide{display:none!important}
+.show{display:block!important}
+.hidden{display:none!important;visibility:hidden!important}
   </style>
 </head>
 <body>
 
 <!-- ═══════════════════════════════════════════════════
      STUDENT DATABASE
-     Add each student as an object below.
-     zsid must match the URL param: queryScore.do?zsid=XXXX
-     Leave HSKK fields empty "" to hide the HSKK panel.
+     URL usage: queryScore.do?zsid=15070449
+     Each student needs a unique "zsid".
+     Leave HSKK fields blank ("") to hide the HSKK panel.
 ══════════════════════════════════════════════════════ -->
 <script>
 var STUDENTS = [
@@ -129,7 +213,7 @@ var STUDENTS = [
 <script>
 (function () {
 
-  /* get URL query param */
+  /* ── get URL query param ── */
   function getParam(name) {
     var qs   = window.location.search.substring(1);
     var vars = qs.split('&');
@@ -142,7 +226,7 @@ var STUDENTS = [
     return null;
   }
 
-  /* find student by zsid */
+  /* ── find student by zsid ── */
   function findStudent(zsid) {
     for (var i = 0; i < STUDENTS.length; i++) {
       if (STUDENTS[i].zsid === zsid) return STUDENTS[i];
@@ -150,201 +234,182 @@ var STUDENTS = [
     return null;
   }
 
-  /* build HSK header columns */
-  function hskHeaders(s) {
-    var isHSK6 = (s["Test Type"] || "").indexOf("六级") !== -1;
-    if (isHSK6) {
-      return '<th><div align="center">听力</div></th>'
-           + '<th><div align="center">阅读</div></th>'
-           + '<th><div align="center">Total Score</div></th>';
-    }
-    return '<th><div align="center">听力</div></th>'
-         + '<th><div align="center">阅读</div></th>'
-         + '<th><div align="center">写作</div></th>'
-         + '<th>\n\t\t\t\t\t\t\t<div align="center">\n\t\t\t\t\t\t\t\t\tTotal Score\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</th>';
-  }
-
-  /* build HSK score cells */
-  function hskScores(s) {
-    var isHSK6 = (s["Test Type"] || "").indexOf("六级") !== -1;
-    if (isHSK6) {
-      return '<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Listening"] + '\n\t\t\t\t\t\t</td>'
-           + '\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Reading"] + '\n\t\t\t\t\t\t</td>'
-           + '\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Total"] + '\n\t\t\t\t\t\t</td>';
-    }
-    return '<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Listening"] + '\n\t\t\t\t\t\t</td>'
-         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Reading"] + '\n\t\t\t\t\t\t</td>'
-         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Writing"] + '\n\t\t\t\t\t\t</td>'
-         + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s["HSK Total"] + '\n\t\t\t\t\t\t</td>';
-  }
-
-  /* render full student result — exact original markup */
+  /* ── render full result — exact original markup ── */
   function renderStudent(s) {
 
-    var photoCell = s["Photo"]
-      ? '<img src="' + s["Photo"] + '" height="200px" onerror="this.style.display=\'none\'"\/>'
+    var photoCell = s['Photo']
+      ? '<img src="' + s['Photo'] + '" height="200px" onerror="this.style.display=\'none\'"\/>'
       : '';
 
-    var hasHSKK = s["HSKK Level"] && s["HSKK Speaking"];
+    var isHSK6 = (s['Test Type'] || '').indexOf('六级') !== -1;
 
-    var hskKBlock = '';
-    if (hasHSKK) {
-      hskKBlock = [
-        '',
-        '\t\t\t\t<div class="panel panel-default">',
-        '\t\t\t\t\t<!-- Default panel contents -->',
-        '\t\t\t\t\t<div class="panel-body">',
-        '\t\t\t\t\t\tHSKK（' + s["HSKK Level"] + '）(' + s["Test Time"] + ')中文水平考试',
-        '\t\t\t\t\t</div>',
-        '\t\t\t\t\t<!-- Table -->',
-        '\t\t\t\t\t<table class="table table-bordered">',
-        '\t\t\t\t\t\t<thead>',
-        '\t\t\t\t\t\t\t<tr class="active">',
-        '\t\t\t\t\t\t\t\t<th><div align="center">口试</div></th>',
-        '\t\t\t\t\t\t\t\t',
-        '\t\t\t\t\t\t\t\t<th><div align="center">Total Score</div></th>',
-        '',
-        '\t\t\t\t\t\t\t\t<th><div align="center">Status</div></th>',
-        '\t\t\t\t\t\t\t</tr>',
-        '\t\t\t\t\t\t</thead>',
-        '\t\t\t\t\t\t<tbody>',
-        '\t\t\t\t\t\t\t<tr>',
-        '\t\t\t\t\t\t\t\t<td align="center">',
-        '\t\t\t\t\t\t\t\t\t' + s["HSKK Speaking"],
-        '\t\t\t\t\t\t\t\t</td>',
-        '\t\t\t\t\t\t\t\t',
-        '\t\t\t\t\t\t\t\t<td align="center">' + s["HSKK Total"] + '</td>',
-        '\t\t\t\t\t\t\t\t<td align="center">' + s["HSKK Status"] + '</td>',
-        '\t\t\t\t\t\t\t</tr>',
-        '\t\t\t\t\t\t</tbody>',
-        '\t\t\t\t\t</table>',
-        '\t\t\t\t</div>'
-      ].join('\n');
+    var hskTH, hskTD;
+    if (isHSK6) {
+      hskTH = '<th><div align="center">听力</div></th>'
+             + '<th><div align="center">阅读</div></th>'
+             + '<th><div align="center">Total Score</div></th>';
+      hskTD = '<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Listening'] + '\n\t\t\t\t\t\t</td>'
+             + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Reading'] + '\n\t\t\t\t\t\t</td>'
+             + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Total'] + '\n\t\t\t\t\t\t</td>';
+    } else {
+      hskTH = '<th><div align="center">听力</div></th>'
+             + '<th><div align="center">阅读</div></th>'
+             + '<th><div align="center">写作</div></th>'
+             + '<th>\n\t\t\t\t\t\t<div align="center">\n\t\t\t\t\t\t\t\tTotal Score\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</th>';
+      hskTD = '<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Listening'] + '\n\t\t\t\t\t\t</td>'
+             + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Reading'] + '\n\t\t\t\t\t\t</td>'
+             + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Writing'] + '\n\t\t\t\t\t\t</td>'
+             + '\n\t\t\t\t\t\t\n\t\t\t\t\t\t<td align="center">\n\t\t\t\t\t\t\t' + s['HSK Total'] + '\n\t\t\t\t\t\t</td>';
     }
 
-    var lines = [
-      '<center>',
-      '  <h2>中文考试成绩在线验证结果查询</h2>',
-      '  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>',
-      '</center>',
-      '<div class="panel panel-default">',
-      '\t<div class="well-lg" >',
-      '\t\t<div class="panel panel-default">',
-      '\t\t\t<!-- Default panel contents -->',
-      '\t\t\t<div class="panel-body">',
-      '\t\t\t\tInformation of test taker ',
-      '\t\t\t</div>',
-      '\t\t\t<!-- Table -->',
-      '\t\t\t<table class="table table-bordered">',
-      '\t\t\t\t<tbody>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Name on Certificate </td>',
-      '\t\t\t\t\t\t<td>' + s["Name on Certificate"] + '</td>',
-      '\t\t\t\t\t\t<td rowspan="5" width="100px">',
-      '\t\t\t\t\t\t\t' + photoCell,
-      '\t\t\t\t\t\t</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Chinese Name</td>',
-      '\t\t\t\t\t\t<td>' + s["Chinese Name"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Nationality</td>',
-      '\t\t\t\t\t\t<td>' + s["Nationality"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Gender</td>',
-      '\t\t\t\t\t\t<td>' + s["Gender"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td colspan="2" class="" style="font-size:14px;">考试信息</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">考点名称</td>',
-      '\t\t\t\t\t\t<td colspan="2">' + s["Exam Center"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Ticket No.</td>',
-      '\t\t\t\t\t\t<td colspan="2">' + s["Ticket No."] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">证书编号</td>',
-      '\t\t\t\t\t\t<td colspan="2"> ' + s["Certificate No."] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Test Type</td>',
-      '\t\t\t\t\t\t<td colspan="2">' + s["Test Type"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t\t',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t<td class="active text-right">Test Time</td>',
-      '\t\t\t\t\t\t<td colspan="2">' + s["Test Time"] + '</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t</tbody>',
-      '\t\t\t</table>',
-      '\t\t</div>',
-      '\t\t',
-      '\t\t',
-      '\t\t<div class="panel panel-default">',
-      '\t\t\t<!-- Default panel contents -->',
-      '\t\t\t<div class="panel-body">',
-      '\t\t\t\t' + s["Test Type"] + '(' + s["Test Time"] + ')中文水平考试',
-      '\t\t\t</div>',
-      '\t\t\t<!-- Table -->',
-      '\t\t\t<table class="table table-bordered">',
-      '\t\t\t\t<thead>',
-      '\t\t\t\t\t<tr class="active">\t\t\t\t\t\t\t',
-      '\t\t\t\t\t\t\t' + hskHeaders(s),
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t</thead>',
-      '\t\t\t\t<tbody>',
-      '\t\t\t\t\t<tr>',
-      '\t\t\t\t\t\t' + hskScores(s),
-      '\t\t\t\t\t\t</td>',
-      '\t\t\t\t\t</tr>',
-      '\t\t\t\t</tbody>',
-      '\t\t\t</table>',
-      '\t\t\t',
-      '\t\t</div>',
-      '\t\t',
-      '\t\t<!-- 越南才显示 或者 能关联上口语的才显示 flag 代表关联上成绩 180 越南-->',
-      '\t\t',
-      '\t\t',
-      hskKBlock,
-      '\t\t<center>',
-      '\t \t\t\t<h6>最终解释权归汉考国际所有</h6>',
-      '\t\t</center>',
-      '\t\t',
-      '\t</div>',
-      '</div>'
-    ];
+    var hasHSKK  = s['HSKK Level'] && s['HSKK Speaking'];
+    var hskKPanel = '';
+    if (hasHSKK) {
+      hskKPanel = '\n\t\t\t<div class="panel panel-default">'
+        + '\n\t\t\t\t<!-- Default panel contents -->'
+        + '\n\t\t\t\t<div class="panel-body">'
+        + '\n\t\t\t\t\tHSKK（' + s['HSKK Level'] + '）(' + s['Test Time'] + ')中文水平考试'
+        + '\n\t\t\t\t</div>'
+        + '\n\t\t\t\t<!-- Table -->'
+        + '\n\t\t\t\t<table class="table table-bordered">'
+        + '\n\t\t\t\t\t<thead>'
+        + '\n\t\t\t\t\t\t<tr class="active">'
+        + '\n\t\t\t\t\t\t\t<th><div align="center">口试</div></th>'
+        + '\n\t\t\t\t\t\t\t'
+        + '\n\t\t\t\t\t\t\t<th><div align="center">Total Score</div></th>'
+        + '\n\n\t\t\t\t\t\t\t<th><div align="center">Status</div></th>'
+        + '\n\t\t\t\t\t\t</tr>'
+        + '\n\t\t\t\t\t</thead>'
+        + '\n\t\t\t\t\t<tbody>'
+        + '\n\t\t\t\t\t\t<tr>'
+        + '\n\t\t\t\t\t\t\t<td align="center">'
+        + '\n\t\t\t\t\t\t\t\t' + s['HSKK Speaking']
+        + '\n\t\t\t\t\t\t\t</td>'
+        + '\n\t\t\t\t\t\t\t'
+        + '\n\t\t\t\t\t\t\t<td align="center">' + s['HSKK Total'] + '</td>'
+        + '\n\t\t\t\t\t\t\t<td align="center">' + s['HSKK Status'] + '</td>'
+        + '\n\t\t\t\t\t\t</tr>'
+        + '\n\t\t\t\t\t</tbody>'
+        + '\n\t\t\t\t</table>'
+        + '\n\t\t\t</div>';
+    }
 
-    return lines.join('\n');
+    return '<center>'
+      + '\n  <h2>中文考试成绩在线验证结果查询</h2>'
+      + '\n  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>'
+      + '\n</center>'
+      + '\n<div class="panel panel-default">'
+      + '\n\t<div class="well-lg" >'
+      + '\n\t\t<div class="panel panel-default">'
+      + '\n\t\t\t<!-- Default panel contents -->'
+      + '\n\t\t\t<div class="panel-body">'
+      + '\n\t\t\t\tInformation of test taker '
+      + '\n\t\t\t</div>'
+      + '\n\t\t\t<!-- Table -->'
+      + '\n\t\t\t<table class="table table-bordered">'
+      + '\n\t\t\t\t<tbody>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Name on Certificate </td>'
+      + '\n\t\t\t\t\t\t<td>' + s['Name on Certificate'] + '</td>'
+      + '\n\t\t\t\t\t\t<td rowspan="5" width="100px">'
+      + '\n\t\t\t\t\t\t\t' + photoCell
+      + '\n\t\t\t\t\t\t</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Chinese Name</td>'
+      + '\n\t\t\t\t\t\t<td>' + s['Chinese Name'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Nationality</td>'
+      + '\n\t\t\t\t\t\t<td>' + s['Nationality'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Gender</td>'
+      + '\n\t\t\t\t\t\t<td>' + s['Gender'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td colspan="2" class="" style="font-size:14px;">考试信息</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">考点名称</td>'
+      + '\n\t\t\t\t\t\t<td colspan="2">' + s['Exam Center'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Ticket No.</td>'
+      + '\n\t\t\t\t\t\t<td colspan="2">' + s['Ticket No.'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">证书编号</td>'
+      + '\n\t\t\t\t\t\t<td colspan="2"> ' + s['Certificate No.'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Test Type</td>'
+      + '\n\t\t\t\t\t\t<td colspan="2">' + s['Test Type'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t\t'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t<td class="active text-right">Test Time</td>'
+      + '\n\t\t\t\t\t\t<td colspan="2">' + s['Test Time'] + '</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t</tbody>'
+      + '\n\t\t\t</table>'
+      + '\n\t\t</div>'
+      + '\n\t\t'
+      + '\n\t\t'
+      + '\n\t\t<div class="panel panel-default">'
+      + '\n\t\t\t<!-- Default panel contents -->'
+      + '\n\t\t\t<div class="panel-body">'
+      + '\n\t\t\t\t' + s['Test Type'] + '(' + s['Test Time'] + ')中文水平考试'
+      + '\n\t\t\t</div>'
+      + '\n\t\t\t<!-- Table -->'
+      + '\n\t\t\t<table class="table table-bordered">'
+      + '\n\t\t\t\t<thead>'
+      + '\n\t\t\t\t\t<tr class="active">\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t' + hskTH
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t</thead>'
+      + '\n\t\t\t\t<tbody>'
+      + '\n\t\t\t\t\t<tr>'
+      + '\n\t\t\t\t\t\t' + hskTD
+      + '\n\t\t\t\t\t\t</td>'
+      + '\n\t\t\t\t\t</tr>'
+      + '\n\t\t\t\t</tbody>'
+      + '\n\t\t\t</table>'
+      + '\n\t\t\t'
+      + '\n\t\t</div>'
+      + '\n\t\t'
+      + '\n\t\t<!-- 越南才显示 或者 能关联上口语的才显示 flag 代表关联上成绩 180 越南-->'
+      + '\n\t\t'
+      + '\n\t\t'
+      + hskKPanel
+      + '\n\t\t<center>'
+      + '\n\t \t\t\t<h6>最终解释权归汉考国际所有</h6>'
+      + '\n\t\t</center>'
+      + '\n\t\t'
+      + '\n\t</div>'
+      + '\n</div>';
   }
 
-  /* not found page — same header, error body */
+  /* ── not found — same header, error body ── */
   function renderNotFound(zsid) {
-    return [
-      '<center>',
-      '  <h2>中文考试成绩在线验证结果查询</h2>',
-      '  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>',
-      '</center>',
-      '<div class="panel panel-default">',
-      '\t<div class="well-lg" style="text-align:center;padding:40px 24px;">',
-      '\t\t<h3 style="color:#a94442;margin-bottom:16px;">未找到记录</h3>',
-      '\t\t<p style="font-size:15px;color:#555;">No score record found for candidate ID: <strong>' + (zsid || '') + '</strong></p>',
-      '\t\t<p style="font-size:13px;color:#999;">请确认准考证号是否正确 / Please verify the ID and try again.</p>',
-      '\t</div>',
-      '</div>'
-    ].join('\n');
+    return '<center>'
+      + '\n  <h2>中文考试成绩在线验证结果查询</h2>'
+      + '\n  <h4>汉考国际教育科技（北京）有限公司（CTI）</h4>'
+      + '\n</center>'
+      + '\n<div class="panel panel-default">'
+      + '\n\t<div class="well-lg" style="text-align:center;padding:40px 24px;">'
+      + '\n\t\t<h3 style="color:#a94442;margin-bottom:16px;">未找到记录</h3>'
+      + '\n\t\t<p style="font-size:15px;color:#555;">No score record found for candidate ID: <strong>' + (zsid || '') + '</strong></p>'
+      + '\n\t\t<p style="font-size:13px;color:#999;">请确认准考证号是否正确 / Please verify the ID and try again.</p>'
+      + '\n\t</div>'
+      + '\n</div>';
   }
 
   /* ── MAIN ── */
   var zsid    = getParam('zsid');
   var student = zsid ? findStudent(zsid) : null;
-  var app     = document.getElementById('app');
-
-  app.innerHTML = student ? renderStudent(student) : renderNotFound(zsid);
+  document.getElementById('app').innerHTML = student
+    ? renderStudent(student)
+    : renderNotFound(zsid);
 
 })();
 </script>
